@@ -1,0 +1,135 @@
+
+$first-color: #FF7700;
+$background-color: #EDEDED;
+$ring-gold: yellow;
+$hex-color: #666666;
+$spaces-color: #2B2B2B;
+
+
+
+/* general front*/
+
+@font-face {
+  font-family: 'aniron';
+  src: url('../fonts/anirm___.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'partybusiness';
+  src: url('../fonts/partybusiness.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'tnganbi';
+  src: url('../fonts/tnganbi.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+body{
+  font-family: "aniron", Arial, Helvetica, sans-serif;
+  font-size: calc(1rem + 1vw);
+}
+
+h2 {
+  font-size: calc(8px + 1.5vw);
+  text-align: center;
+  padding-top: 55px;
+}
+.row{
+  margin: 35px auto;
+}
+
+.card {
+  text-align: center;
+}
+
+@mixin lineRing($size, $color){
+  border-radius: 50%;
+  height: $size;
+  width: $size;
+  vertical-align: -50%;
+  background-color: rgba(0,0,0,0);
+  box-shadow: $size/50 $size/50 $size/50 darken($color, 8%), inset $size/50 $size/50 $size/50 darken($color, 8%);
+  border: $size/15 solid $color;
+}
+
+/* header */
+
+.navbar, .navbar-expand-lg {
+  background-color: $first-color;
+  .nav-link{
+    color: white;
+    font-size: 20px;
+    &:hover{
+      color:white;
+      text-decoration: underline white;
+    }
+  }
+  .navbar-nav, .nav-item{
+    margin-left: auto;
+  }
+  .fa-bars{
+    color: white;
+  }
+  .nav-item:not(:last-of-type){
+    @media (min-width:992px){
+      border-right: 1px solid white;
+    }
+  }
+}
+
+/*sectionRing*/
+
+.sectionRing{
+  background:$background-color;
+  color:$spaces-color;
+  padding:15px;
+}
+
+
+/*ring*/
+
+.ring-title {
+  &:before, &:after{
+    content: "";
+    display: block;
+    margin: 0 10px;
+    @include lineRing(45px, $first-color);
+  }
+}
+
+.ring-principal {
+  &:before{
+    content: "";
+    display: block;
+    margin: 0 10px;
+    @include lineRing(150px, $ring-gold);
+  }
+}
+
+@for $i from 1 through 6 {
+  .ringLine:nth-of-type(#{$i}) {
+    @include lineRing(35px * (1+($i/3)), $hex-color);
+    margin-right: -((35px * (1+($i/2)))*0.35);
+  }
+}
+
+/* Footer */
+
+footer.row {
+  background-color:$first-color;
+  margin: 0;
+  font-family: "partybusiness", Arial, serif;
+  ul {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}

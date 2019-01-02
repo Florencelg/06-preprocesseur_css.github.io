@@ -1,0 +1,185 @@
+/* general front*/
+@font-face {
+    font-family: 'aniron';
+    src: url("../fonts/anirm___.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'partybusiness';
+    src: url("../fonts/partybusiness.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'tnganbi';
+    src: url("../fonts/tnganbi.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    font-family: "aniron", Arial, Helvetica, sans-serif;
+    font-size: calc(1rem + 1vw);
+}
+
+h2 {
+    font-size: calc(8px + 1.5vw);
+    text-align: center;
+    padding-top: 55px;
+}
+
+.row {
+    margin: 35px auto;
+}
+
+.card {
+    text-align: center;
+}
+
+/* header */
+.navbar, .navbar-expand-lg {
+    background-color: #FF7700;
+}
+
+.navbar .nav-link, .navbar-expand-lg .nav-link {
+    color: white;
+    font-size: 20px;
+}
+
+.navbar .nav-link:hover, .navbar-expand-lg .nav-link:hover {
+    color: white;
+    text-decoration: underline white;
+}
+
+.navbar .navbar-nav, .navbar .nav-item, .navbar-expand-lg .navbar-nav, .navbar-expand-lg .nav-item {
+    margin-left: auto;
+}
+
+.navbar .fa-bars, .navbar-expand-lg .fa-bars {
+    color: white;
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item:not(:last-of-type), .navbar-expand-lg .nav-item:not(:last-of-type) {
+        border-right: 1px solid white;
+    }
+}
+
+/*sectionRing*/
+.sectionRing {
+    background: #EDEDED;
+    color: #2B2B2B;
+    padding: 15px;
+}
+
+/*ring*/
+.ring-title:before, .ring-title:after {
+    content: "";
+    display: block;
+    margin: 0 10px;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    vertical-align: -50%;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 0.9px 0.9px 0.9px #d66400, inset 0.9px 0.9px 0.9px #d66400;
+    border: 3px solid #FF7700;
+}
+
+.ring-principal:before {
+    content: "";
+    display: block;
+    margin: 0 10px;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    vertical-align: -50%;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 3px 3px 3px #d6d600, inset 3px 3px 3px #d6d600;
+    border: 10px solid yellow;
+}
+
+.ringLine:nth-of-type(1) {
+    border-radius: 50%;
+    height: 46.66667px;
+    width: 46.66667px;
+    vertical-align: -50%;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 0.93333px 0.93333px 0.93333px #525252, inset 0.93333px 0.93333px 0.93333px #525252;
+    border: 3.11111px solid #666666;
+    margin-right: -18.375px;
+}
+
+.ringLine:nth-of-type(2) {
+    border-radius: 50%;
+    height: 58.33333px;
+    width: 58.33333px;
+    vertical-align: -50%;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 1.16667px 1.16667px 1.16667px #525252, inset 1.16667px 1.16667px 1.16667px #525252;
+    border: 3.88889px solid #666666;
+    margin-right: -24.5px;
+}
+
+.ringLine:nth-of-type(3) {
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    vertical-align: -50%;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 1.4px 1.4px 1.4px #525252, inset 1.4px 1.4px 1.4px #525252;
+    border: 4.66667px solid #666666;
+    margin-right: -30.625px;
+}
+
+.ringLine:nth-of-type(4) {
+    border-radius: 50%;
+    height: 81.66667px;
+    width: 81.66667px;
+    vertical-align: -50%;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 1.63333px 1.63333px 1.63333px #525252, inset 1.63333px 1.63333px 1.63333px #525252;
+    border: 5.44444px solid #666666;
+    margin-right: -36.75px;
+}
+
+.ringLine:nth-of-type(5) {
+    border-radius: 50%;
+    height: 93.33333px;
+    width: 93.33333px;
+    vertical-align: -50%;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 1.86667px 1.86667px 1.86667px #525252, inset 1.86667px 1.86667px 1.86667px #525252;
+    border: 6.22222px solid #666666;
+    margin-right: -42.875px;
+}
+
+.ringLine:nth-of-type(6) {
+    border-radius: 50%;
+    height: 105px;
+    width: 105px;
+    vertical-align: -50%;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 2.1px 2.1px 2.1px #525252, inset 2.1px 2.1px 2.1px #525252;
+    border: 7px solid #666666;
+    margin-right: -49px;
+}
+
+/* Footer */
+footer.row {
+    background-color: #FF7700;
+    margin: 0;
+    font-family: "partybusiness", Arial, serif;
+}
+
+footer.row ul {
+    list-style-type: none;
+}
+
+footer.row a {
+    text-decoration: none;
+    color: white;
+}
